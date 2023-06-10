@@ -1,6 +1,6 @@
-import React from 'react'
+import React, { useRef, useEffect } from 'react'
 
-import { NavLink } from 'react-router-dom'
+import { NavLink, useNavigate } from 'react-router-dom'
 import './header.css'
 
 import { motion } from 'framer-motion'
@@ -9,6 +9,7 @@ import logo from '../../assets/images/eco-logo.png'
 import userIcon from '../../assets/images/user-icon.png'
 
 import { Container, Row } from 'reactstrap'
+import { useSelector } from 'react-redux'
 
 const nav__links = [
   {
@@ -26,7 +27,39 @@ const nav__links = [
 ]
 
 const Header = () => {
-  return <header className='header'>
+
+  const headerRef = useRef(null)
+  const navigate = useNavigate()
+
+  const totalQuantity = useSelector(state=> state.cart.totalQuantity)
+
+  const menuRef = useRef(null)
+
+  const stickyHeaderFunc = ()=> {
+    window.addEventListener('scroll', ()=>{
+      if(document.body.scrollTop > 80 || document.documentElement.scrollTop > 80){
+        headerRef.current.classList.add('sticky__header')
+      } else{
+        headerRef.current.classList.remove('sticky__header')
+      }
+    })
+  }
+
+  useEffect(() => {
+    stickyHeaderFunc()
+
+    return () => window.removeEventListener("scroll", stickyHeaderFunc);
+  });
+
+  const menuToggle = ()=> menuRef.current.classList.toggle('active__menu')
+
+  const navigateToCart =()=>{
+        navigate("/cart")
+  }
+
+
+  return (
+  <header className="header" ref={headerRef}>
     <Container>
       <Row>
         <div className="nav__wrapper">
@@ -36,8 +69,8 @@ const Header = () => {
             <h1>ScentShop</h1>
           </div>
          </div>
-         <div className="navigation">
-          <ul className="menu">
+         <div className="navigation" ref={menuRef} onClick={menuToggle}>
+          <motion.ul className="menu">
             {
               nav__links.map((item, index)=>(
                 <li className="nav__item" key={index}> 
@@ -45,30 +78,29 @@ const Header = () => {
                 </li>
               ))
             }
-          </ul>
+          </motion.ul>
          </div>
 
 <div className="nav__icons">
-
-
-  <span className="fav__icon"><i class="ri-heart-2-line"></i>
-  <span className="badge">1</span>
+  <span className="fav__icon">
+    <i class="ri-heart-2-line"></i>
+  <span className="badge">2</span>
   </span>
-  <span className="cart__icon"><i class="ri-shopping-bag-line">
-  <span className="badge">1</span>
+  <span className="cart__icon" onClick={navigateToCart} >
+    <i class="ri-shopping-bag-line">
+  <span className="badge">{totalQuantity}</span>
     </i></span>
 
        <span><motion.img whileTap={{scale: 1.2 }} src={userIcon} alt="" /></span>
-</div>
-
-      <div className="mobile__menu">
-        <span><i class="ri-menu-line"></i></span>
+       <div className="mobile__menu">
+        <span onClick={menuToggle}><i class="ri-menu-line"></i></span>
       </div>
+</div>
 
         </div>
       </Row>
     </Container>
   </header>
+  )
 }
-
 export default Header
