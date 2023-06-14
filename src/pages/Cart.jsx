@@ -8,9 +8,12 @@ import { motion } from 'framer-motion'
 import { cartActions } from "../redux/slices/cartSlice"
 import { useSelector, useDispatch } from 'react-redux'
 
+import { Link } from 'react-router-dom'
+
 const Cart = () => {
 
-  const cartItems = useSelector(state=> state.cart.cartItems);
+  const cartItems = useSelector((state)=> state.cart.cartItems);
+  const totalAmount = useSelector ((state) => state.cart.totalAmount);
 
   return  (
   <Helmet title="Cart">
@@ -47,7 +50,21 @@ const Cart = () => {
             
           </Col>
 
-          <Col lg='3'></Col>
+          <Col lg='3'>
+            <div>
+              <h6 className="d-flex align-items-center justify-content-between">Subtotal <span className="fs-4 fw-bold">&#8358;{totalAmount}</span></h6> 
+            </div>
+            <p className="fs-6 mt-2">taxes and shipping will calculate in checkout</p>
+            <div>
+              <button className="buy__btn w-100">
+                <Link to="/checkout">Checkout</Link>
+                </button>
+
+                <button className="buy__btn w-100 mt-3">
+                <Link to="/shop">Continue Shopping</Link>
+                </button>
+            </div>
+          </Col>
         </Row>
       </Container>
     </section>
@@ -61,7 +78,7 @@ const Tr = ({ item }) => {
 
 
  const deleteProduct = ()=> {
-  dispatch(cartActions.deleteItem(item.d));
+  dispatch(cartActions.deleteItem(item.id));
  };
 
   return (

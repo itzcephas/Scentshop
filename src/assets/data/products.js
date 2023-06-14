@@ -31,16 +31,16 @@ import productImg25 from "../images/new-02.jpg";
 const products = [
   {
     id: "01",
-    productName: "Stone and Beam Westview ",
+    productName: "Tom Ford Oud Wood ",
     imgUrl: productImg01,
     category: "Bestsales",
     price: 193,
     shortDesc:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
+      "Tom Ford Oud Wood EDP 100ml Perfume For Men",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio nostrum accusantium iste, voluptas cumque provident! Consequatur officiis animi rem tempore voluptate cumque hic similique aperiam ut consectetur distinctio repudiandae quia quam quos, quas illo, iusto, necessitatibus odio veniam exercitationem quis voluptatibus debitis laboriosam! Esse debitis obcaecati blanditiis at impedit quibusdam!",
-    reviews: [
-      {
+      "Tom Ford Oud Wood Eau de Parfum 100ml. Rare. Exotic. Distinctive. One of the most rare, precious, and expensive ingredients in a perfumers arsenal, oud wood is often burned in incense-filled temples. Exotic rose wood and cardamom give way to a Smokey blend of rare oud wood, sandalwood and vetiver. Tonka bean and amber add warmth and sensuality infused with the rare and distinct scent of oud wood",
+    reviews:  [
+    {
         rating: 4.7,
         text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
       },
@@ -50,14 +50,14 @@ const products = [
 
   {
     id: "02",
-    productName: "Rivet Bigelow Modern ",
+    productName: "Tom Ford Ombre Leather ",
     imgUrl: productImg02,
     category: "Bestsales",
     price: 253,
     shortDesc:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
+      "Tom Ford Ombre Leather EDP 100ml Perfume For Men",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio nostrum accusantium iste, voluptas cumque provident! Consequatur officiis animi rem tempore voluptate cumque hic similique aperiam ut consectetur distinctio repudiandae quia quam quos, quas illo, iusto, necessitatibus odio veniam exercitationem quis voluptatibus debitis laboriosam! Esse debitis obcaecati blanditiis at impedit quibusdam!",
+      "Vast. Untethered. Driven. Freedom comes from within, the desert heart of the west wrapped in leather. It moves forward, untethered, through the still air of wide-open space. Dust on wind, skin on skin, Ombré Leather reveals itself",
     reviews: [
       {
         rating: 4.8,
@@ -73,14 +73,14 @@ const products = [
 
   {
     id: "03",
-    productName: "Amazon Brand Modern Sofa",
+    productName: "Tom Ford Black Orchid",
     imgUrl: productImg03,
     category: "Bestsales",
     price: 173,
     shortDesc:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
+      "Tom Ford Black Orchid EDP 100ml Perfume Unisex",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio nostrum accusantium iste, voluptas cumque provident! Consequatur officiis animi rem tempore voluptate cumque hic similique aperiam ut consectetur distinctio repudiandae quia quam quos, quas illo, iusto, necessitatibus odio veniam exercitationem quis voluptatibus debitis laboriosam! Esse debitis obcaecati blanditiis at impedit quibusdam!",
+      "Black Orchid starts right off with a bang. It is a statement fragrance, make no mistake about it. There is citrus, there is lots of sugar, there are heady floral notes, there is jammy fruit. Tempering all of that is a strong undertone of something earthy and dark (the black truffle accord, presumably) and vaguely off-kilter, in a good way.",
     reviews: [
       {
         rating: 4.6,
@@ -117,14 +117,14 @@ const products = [
   },
   {
     id: "04",
-    productName: "Fllufy Sheep Sofa",
+    productName: "Christian Dior Sauvage",
     imgUrl: productImg04,
     category: "Bestsales",
     price: 163,
     shortDesc:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
+      "New Christian Dior Sauvage Parfum (2019) 100ml Perfume For Men",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio nostrum accusantium iste, voluptas cumque provident! Consequatur officiis animi rem tempore voluptate cumque hic similique aperiam ut consectetur distinctio repudiandae quia quam quos, quas illo, iusto, necessitatibus odio veniam exercitationem quis voluptatibus debitis laboriosam! Esse debitis obcaecati blanditiis at impedit quibusdam!",
+      "New 2019 Christian Dior Sauvage Parfum 100ml Perfume For Men. Dior Sauvage Parfum is a new, highly concentrated interpretation of the original, inspired by landscapes of moonlit prairies, dark skies and campfires. Dior perfumer François Demachy designed the composition to blend extreme freshness with warm, oriental tones. The result is a rich and intoxicating Oriental",
     reviews: [
       {
         rating: 4.6,
@@ -140,14 +140,14 @@ const products = [
 
   {
     id: "05",
-    productName: "Faux Velvet Sofa",
+    productName: "Christian Dior Homme",
     imgUrl: productImg05,
     category: "Bestsales",
     price: 163,
     shortDesc:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
+      "Christian Dior Homme Parfum 2020 Edition 100ml For Men",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio nostrum accusantium iste, voluptas cumque provident! Consequatur officiis animi rem tempore voluptate cumque hic similique aperiam ut consectetur distinctio repudiandae quia quam quos, quas illo, iusto, necessitatibus odio veniam exercitationem quis voluptatibus debitis laboriosam! Esse debitis obcaecati blanditiis at impedit quibusdam!",
+      "Level up to the new 2020 Dior Homme Parfum, the quintessence of Dior Homme. This scent reveals an unusual concentration for a smooth and intense leather fragrance. The nobility of its ingredients is expressed differently on each person's skin.",
     reviews: [
       {
         rating: 4.6,
@@ -163,14 +163,14 @@ const products = [
 
   {
     id: "06",
-    productName: "Fllufy Sheep Sofa",
+    productName: "Christian Dior Fahrenheit",
     imgUrl: productImg06,
     category: "Bestsales",
     price: 163,
     shortDesc:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
+      "Christian Dior Fahrenheit EDT 100ml For Men",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio nostrum accusantium iste, voluptas cumque provident! Consequatur officiis animi rem tempore voluptate cumque hic similique aperiam ut consectetur distinctio repudiandae quia quam quos, quas illo, iusto, necessitatibus odio veniam exercitationem quis voluptatibus debitis laboriosam! Esse debitis obcaecati blanditiis at impedit quibusdam!",
+      "Designed by Christian Dior in 1988, Fahrenheit is a refreshing, woody, mossy fragrance. This contemporary masculine scent contains bergamot, lemon, lavender and is accented with violet, cedar and leather making Fahrenheit perfect for casual and formal use.",
     reviews: [
       {
         rating: 4.6,
@@ -190,9 +190,9 @@ const products = [
     category: "CHANEL",
     price: 99,
     shortDesc:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
+      "Chanel Bleu De Chanel PARFUM 100ml Perfume For Men",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio nostrum accusantium iste, voluptas cumque provident! Consequatur officiis animi rem tempore voluptate cumque hic similique aperiam ut consectetur distinctio repudiandae quia quam quos, quas illo, iusto, necessitatibus odio veniam exercitationem quis voluptatibus debitis laboriosam! Esse debitis obcaecati blanditiis at impedit quibusdam!",
+      "BLEU DE CHANEL represents the colour of freedom. A fragrance unveiling three nuances of its temperament in three interpretations: Eau de Toilette from 2010, Eau de Parfum from 2014 and Parfum from 2018",
     reviews: [
       {
         rating: 4.6,
@@ -208,14 +208,14 @@ const products = [
 
   {
     id: "27",
-    productName: "Modern Arm Sofa",
+    productName: "Christian Dior Jadore ",
     imgUrl: productImg007,
     category: "Bestsales",
     price: 173,
     shortDesc:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
+      "Christian Dior Jadore EDP 150ml For Women",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio nostrum accusantium iste, voluptas cumque provident! Consequatur officiis animi rem tempore voluptate cumque hic similique aperiam ut consectetur distinctio repudiandae quia quam quos, quas illo, iusto, necessitatibus odio veniam exercitationem quis voluptatibus debitis laboriosam! Esse debitis obcaecati blanditiis at impedit quibusdam!",
+      "This perfume carries in its height the science of flowers Sublimates its floral notes with 4 absolutes of mythical flowers Turkish rose Tuberose Sambac jasmine & Comorian Ylang-ylang Flower absolutes result from sophisticated process of extraction Invites women in an abounding floral garden Offers an ultra feminine ritual full of intensity & emotion",
     reviews: [
       {
         rating: 4.6,
@@ -236,9 +236,9 @@ const products = [
     category: "CHANEL",
     price: 89,
     shortDesc:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
+      "Chanel No 5 Eau Premiere 100ml For Women",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio nostrum accusantium iste, voluptas cumque provident! Consequatur officiis animi rem tempore voluptate cumque hic similique aperiam ut consectetur distinctio repudiandae quia quam quos, quas illo, iusto, necessitatibus odio veniam exercitationem quis voluptatibus debitis laboriosam! Esse debitis obcaecati blanditiis at impedit quibusdam!",
+      "Chanel No 5 Eau Premiere (2015) by Chanel is a Floral Aldehyde fragrance for women. Chanel No 5 Eau Premiere (2015) was launched in 2015. The nose behind this fragrance is Jacques Polge. Top notes are Aldehydes, Ylang-Ylang and Neroli; middle notes are Jasmine and Rose; base notes are Vanilla, Sandalwood and Vetiver.",
     reviews: [
       {
         rating: 4.6,
@@ -259,9 +259,9 @@ const products = [
     category: "CHANEL",
     price: 112,
     shortDesc:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
+      "Chanel Coco Noir EDP 100ml For Women",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio nostrum accusantium iste, voluptas cumque provident! Consequatur officiis animi rem tempore voluptate cumque hic similique aperiam ut consectetur distinctio repudiandae quia quam quos, quas illo, iusto, necessitatibus odio veniam exercitationem quis voluptatibus debitis laboriosam! Esse debitis obcaecati blanditiis at impedit quibusdam!",
+      "A floral woody musk fragrance for contemporary women. Crisp, sweet, juicy, sharp & intoxicating. Top notes of grapefruit & Calabrian bergamot Heart notes of rose, narcissus, rose geranium leaf & jasmine Base notes of tonka bean, sandalwood, vanilla, patchouli & white musk frankincense. Launched in 2012 and suitable for night wear or special occasions",
     reviews: [
       {
         rating: 4.6,

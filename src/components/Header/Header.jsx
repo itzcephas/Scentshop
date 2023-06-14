@@ -8,8 +8,13 @@ import { motion } from 'framer-motion'
 import logo from '../../assets/images/eco-logo.png'
 import userIcon from '../../assets/images/user-icon.png'
 
-import { Container, Row } from 'reactstrap'
+import { Container, Row, } from 'reactstrap'
 import { useSelector } from 'react-redux'
+import useAuth from "../../custom-hooks/useAuth"
+import { Link } from 'react-router-dom'
+import { signOut } from 'firebase/auth'
+import { auth } from '../../firebase.config'
+import { toast } from 'react-toastify'
 
 const nav__links = [
   {
@@ -30,8 +35,10 @@ const Header = () => {
 
   const headerRef = useRef(null)
   const navigate = useNavigate()
+  const {currentUser} = useAuth()
 
   const totalQuantity = useSelector(state=> state.cart.totalQuantity)
+  const profileActionRef = useRef(null)
 
   const menuRef = useRef(null)
 
@@ -45,6 +52,17 @@ const Header = () => {
     })
   }
 
+  const logout = () => {
+
+    signOut(auth).then(()=>{
+      toast.success('Logged out')
+      navigate("/home")
+    }).catch(err=>{
+      toast.error(err.message)
+    })
+
+  }
+
   useEffect(() => {
     stickyHeaderFunc()
 
@@ -53,9 +71,11 @@ const Header = () => {
 
   const menuToggle = ()=> menuRef.current.classList.toggle('active__menu')
 
-  const navigateToCart =()=>{
-        navigate("/cart")
-  }
+  const navigateToCart = () => {
+    navigate("/cart");
+  };
+
+  const toggleProfileActions = () => profileActionRef.current.classList.toggle('show__profileActions')
 
 
   return (
@@ -91,7 +111,21 @@ const Header = () => {
   <span className="badge">{totalQuantity}</span>
     </i></span>
 
-       <span><motion.img whileTap={{scale: 1.2 }} src={userIcon} alt="" /></span>
+       <div className="profile">
+        <motion.img 
+       whileTap={{scale: 1.2 }} 
+       src={ currentUser? currentUser.photoURL : userIcon} 
+       alt="" onClick={toggleProfileActions} />
+       </div>
+       <div className="logout__icons">
+        {
+          currentUser ? <span onClick={logout}>Logout<span><i class="ri-logout-box-line"></i></span></span> : 
+          <div className="d-flex align-items-center gap-4 fw-500">
+            <Link to="/signup">Signup</Link>
+            <Link to="/login">Login</Link>
+          </div>
+        }
+       </div>
        <div className="mobile__menu">
         <span onClick={menuToggle}><i class="ri-menu-line"></i></span>
       </div>
